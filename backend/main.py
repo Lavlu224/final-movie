@@ -10,9 +10,15 @@ from routes.multisource import router as multisource_router
 from routes.movies import router as movies_router
 from database import init_db
 
-init_db()
-
 app = FastAPI(title="Movie Streaming API")
+
+@app.on_event("startup")
+def startup():
+    try:
+        init_db()
+        print("Database initialized successfully")
+    except Exception as e:
+        print(f"Database init failed (app will still run): {e}")
 
 app.include_router(multisource_router, prefix="/multisource")
 app.include_router(movies_router, prefix="/api")
@@ -27,6 +33,10 @@ app.add_middleware(
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 BASE_URL = "https://api.themoviedb.org/3"
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.get("/")
 def root():
