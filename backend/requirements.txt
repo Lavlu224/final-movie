@@ -3,5 +3,7 @@ uvicorn[standard]
 httpx
 pydantic
 python-dotenv
-sqlalchemy[asyncio]
-asyncpg
+sqlalchemy
+psycopg2-binary
+beautifulsoup4
+lxml
