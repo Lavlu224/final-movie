@@ -6,7 +6,7 @@ import Sidebar from '@/components/Sidebar';
 import PublicNavbar from '@/components/PublicNavbar';
 import { Play } from 'lucide-react';
 
-const API = 'http://localhost:8000/api';
+const API = 'https://api.zenty.live/api';
 
 function MovieCard({ movie }: { movie: any }) {
   return (

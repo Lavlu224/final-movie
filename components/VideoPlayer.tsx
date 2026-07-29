@@ -5,7 +5,7 @@ interface VideoPlayerProps {
   title?: string;
 }
 
-const API = 'http://localhost:8000';
+const API = 'https://api.zenty.live';
 
 export default function VideoPlayer({ src }: VideoPlayerProps) {
   const stMatch = src.match(/streamtape\.com\/[ve]\/([a-zA-Z0-9]+)/);

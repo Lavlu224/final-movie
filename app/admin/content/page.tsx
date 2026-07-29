@@ -96,7 +96,7 @@ export default function ContentLibrary() {
   const handleBackfill = async (movie: any) => {
     setBackfilling(prev => new Set(prev).add(movie.id));
     try {
-      await fetch(`http://localhost:8000/api/movies/backfill/${movie.id}`, { method: 'POST' });
+      await fetch(`https://api.zenty.live/api/movies/backfill/${movie.id}`, { method: 'POST' });
     } catch {}
     setBackfilling(prev => { const n = new Set(prev); n.delete(movie.id); return n; });
     loadData();

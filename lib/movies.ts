@@ -1,4 +1,4 @@
-const API = 'http://localhost:8000/api';
+const API = 'https://api.zenty.live/api';
 
 export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
 

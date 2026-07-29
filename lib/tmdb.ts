@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = 'https://api.zenty.live';
 
 export const getTrending = () => fetch(`${BACKEND_URL}/trending`).then(r => r.json());
 export const getPopularTV = () => fetch(`${BACKEND_URL}/tv/popular`).then(r => r.json());

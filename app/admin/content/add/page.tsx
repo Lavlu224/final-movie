@@ -6,7 +6,7 @@ import { createMovie } from '@/lib/movies';
 import { Search, ArrowLeft, ExternalLink, Link as LinkIcon, Film, Play, Upload, RefreshCw, CheckCircle2, Library } from 'lucide-react';
 import Link from 'next/link';
 
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = 'https://api.zenty.live';
 const PROXY_URL = `${BACKEND_URL}/multisource/proxy-image?url=`;
 
 const getPosterUrl = (url: string | null) => {

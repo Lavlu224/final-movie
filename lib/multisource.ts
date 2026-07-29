@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:8000/multisource';
+const BACKEND_URL = 'https://api.zenty.live/multisource';
 
 export async function searchAllSites(query: string) {
   const res = await fetch(`${BACKEND_URL}/search?q=${encodeURIComponent(query)}`);
