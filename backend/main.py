@@ -1,14 +1,15 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
 import os
-from dotenv import load_dotenv
 
 from routes.multisource import router as multisource_router
 from routes.movies import router as movies_router
 from database import init_db
 
-load_dotenv()
 init_db()
 
 app = FastAPI(title="Movie Streaming API")
